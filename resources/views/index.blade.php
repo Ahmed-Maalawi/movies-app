@@ -9,7 +9,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -26,7 +26,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -43,7 +43,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -60,7 +60,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -77,7 +77,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -94,7 +94,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -111,7 +111,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -128,7 +128,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -145,7 +145,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -162,7 +162,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -187,7 +187,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -204,7 +204,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -221,7 +221,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -238,7 +238,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -255,7 +255,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -272,7 +272,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -289,7 +289,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -306,7 +306,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -323,7 +323,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
@@ -340,7 +340,7 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img class="hover:opacity-75 transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
+                    <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ asset('img/cover.jpg') }}" alt="cover">
                 </a>
                 <div class="mt-2">
                     <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>

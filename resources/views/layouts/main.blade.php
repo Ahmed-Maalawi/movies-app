@@ -13,7 +13,7 @@
         <div class="container flex-col md:flex-row mx-auto flex items-center justify-between px-10 py-6">
             <ul class="flex flex-col md:flex-row items-center">
                 <li class="text-2xl text-bold">
-                    <a href="#" class="flex items-center">
+                    <a href="{{ url('/') }}" class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                             width="50" height="50"
                             viewBox="0 0 100 100"

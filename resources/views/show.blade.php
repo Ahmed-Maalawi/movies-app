@@ -3,20 +3,25 @@
 @section('content')
     <div class="movie-info border-b border-gray-800">
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
-            <img class="w-64 md:w-96 ml-2 md:ml-6" src="{{ asset('img/cover.jpg') }}" alt="cover-img">
+            <img class="w-64 md:w-96 ml-2 md:ml-6" src="{{ 'https://image.tmdb.org/t/p/w500'.$movie['poster_path'] }}" alt="cover-img">
             <div class="md:ml-24 ml-0 mt-4 md:mt-0">
-                <h2 class="text-4xl font-semibold capitalize">she hulk</h2>
+                <h2 class="text-4xl font-semibold capitalize">{{ $movie['original_title'] }}</h2>
                 <div class="flex flex-wrap items-center text-gray-400 text-xl mt-4 md:mt-1">
                     <svg class="fill-current text-orange-400 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    <span class="ml-1">85%</span>
+                    <span class="ml-1">{{ $movie['vote_average'] }}</span>
                     <span class="mx-2">|</span>
-                    <span>Feb 20, 2022</span>
+                    <span>{{ \Carbon\Carbon::parse($movie['release_date'])->format('M d, Y') }}</span>
                     <span class="mx-2">|</span>
-                    <span>Action, Thriller, Comedy</span>
+                    <span>
+                        @foreach ($movie['genres'] as $genre)
+                            {{ $genre['name'] }} @if(! $loop->last),@endif
+                        @endforeach
+                        {{-- Action, Thriller, Comedy --}}
+                    </span>
                 </div>
 
                 <p class="mt-12 text-gray-300">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit harum tenetur consequatur voluptates quae magni dolores ducimus accusantium fuga! Dicta, voluptatem exercitationem. Quidem eveniet numquam tempore consequuntur quis adipisci reprehenderit nesciunt amet nostrum consequatur similique dignissimos excepturi, nemo, sequi beatae, illum neque facilis. Maiores magnam voluptates quisquam quo, ratione quis?
+                    {{ $movie['overview'] }}
                 </p>
 
                 <div class="mt-12">
@@ -46,61 +51,19 @@
         <div class="container mx-auto px-12 py-16">
             <h2 class="text-xl font-semibold capitalize">cast</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                <div class="mt-8">
-                    <a href="#">
-                        <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ asset('img/cover.jpg') }}" alt="cover">
-                    </a>
-                    <div class="mt-2 ">
-                        <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
-                        <div class="text-gray-400 text-sm">
-                            Action, Thriller, Comedy
+                @foreach ($cast as $actor)
+                    <div class="mt-8">
+                        <a href="#">
+                            <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ (isset($actor['profile_path']))? 'https://image.tmdb.org/t/p/w500'.$actor['profile_path'] : asset('img/unknown.jpg') }}" alt="cast-member">
+                        </a>
+                        <div class="mt-2 ">
+                            <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">{{ $actor['name'] }}</a>
+                            <div class="text-gray-400 text-sm">
+                                {{  $actor['character'] }}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mt-8">
-                    <a href="#">
-                        <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ asset('img/cover.jpg') }}" alt="cover">
-                    </a>
-                    <div class="mt-2 ">
-                        <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
-                        <div class="text-gray-400 text-sm">
-                            Action, Thriller, Comedy
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <a href="#">
-                        <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ asset('img/cover.jpg') }}" alt="cover">
-                    </a>
-                    <div class="mt-2 ">
-                        <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
-                        <div class="text-gray-400 text-sm">
-                            Action, Thriller, Comedy
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <a href="#">
-                        <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ asset('img/cover.jpg') }}" alt="cover">
-                    </a>
-                    <div class="mt-2 ">
-                        <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
-                        <div class="text-gray-400 text-sm">
-                            Action, Thriller, Comedy
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <a href="#">
-                        <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ asset('img/cover.jpg') }}" alt="cover">
-                    </a>
-                    <div class="mt-2 ">
-                        <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">she hulk</a>
-                        <div class="text-gray-400 text-sm">
-                            Action, Thriller, Comedy
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 

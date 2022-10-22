@@ -16,7 +16,6 @@
                         @foreach ($movie['genres'] as $genre)
                             {{ $genre['name'] }} @if(! $loop->last),@endif
                         @endforeach
-                        {{-- Action, Thriller, Comedy --}}
                     </span>
                 </div>
 
@@ -29,11 +28,12 @@
                     <div class="flex flex-col md:flex-row mt-4">
                         @foreach ($movie['credits']['crew'] as $crew)
                             @if ($loop->index < 2)
-                            <div class="ml-0 dm:ml-8 mt-4 md:mt-0 mr-8">
-                                <div>{{  $crew['name'] }}</div>
-                                <div class="text-sm text-gray-400">{{ $crew['job'] }}</div>
-                            </div>
-                            @endif
+                                <div class="ml-0 dm:ml-8 mt-4 md:mt-0 mr-8">
+                                    <div>{{  $crew['name'] }}</div>
+                                    <div class="text-sm text-gray-400">{{ $crew['job'] }}</div>
+                                </div>
+                            @else
+                                @break
                         @endforeach
                     </div>
                 </div>
@@ -65,6 +65,8 @@
                                 </div>
                             </div>
                         </div>
+                    @else
+                        @break
                     @endif
                 @endforeach
             </div>
@@ -77,11 +79,11 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
                 @foreach ($movie['images']['backdrops'] as $img)
                     @if ($loop->index < 9)
-                    <div class="mt-8">
-                        <a href="#">
-                            <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ (isset($img['file_path']))? 'https://image.tmdb.org/t/p/w500'.$img['file_path'] : asset('img/unknown.jpg') }}" alt="cast-member">
-                        </a>
-                    </div>
+                        <div class="mt-8">
+                            <a href="#">
+                                <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ (isset($img['file_path']))? 'https://image.tmdb.org/t/p/w500'.$img['file_path'] : asset('img/unknown.jpg') }}" alt="cast-member">
+                            </a>
+                        </div>
                     @endif
                 @endforeach
             </div>

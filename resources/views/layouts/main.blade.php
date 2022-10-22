@@ -7,6 +7,7 @@
     <title>Movies-App</title>
     @vite('resources/css/app.css')
     @livewireStyles
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="text-white bg-gray-900 font-sans">
 
@@ -22,11 +23,11 @@
                      <span class="capitalize ml-2">movies app</span></a></li>
                 <li class="ml-0 md:ml-16 mt-2 md:mt-0"><a href="{{ route('movies.index') }}" class="hover:text-gray-300">Movies</a></li>
                 <li class="ml-0 md:ml-16 mt-2 md:mt-0"><a href="#" class="hover:text-gray-300">TV-Shows</a></li>
-                <li class="ml-0 md:ml-16 mt-2 md:mt-0"><a href="#" class="hover:text-gray-300">Actors</a></li>
+                <li class="ml-0 md:ml-16 mt-2 md:mt-0"><a href="{{ route('actors.index') }}" class="hover:text-gray-300">Actors</a></li>
             </ul>
 
             <div class="flex flex-col md:flex-row items-center">
-                
+
                 @livewire('search-dropdown')
 
                 <div class="md:ml-4 mt-4 md:mt-0">
@@ -41,5 +42,6 @@
     @yield('content')
 
     @livewireScripts
+    @yield('scripts')
 </body>
 </html>

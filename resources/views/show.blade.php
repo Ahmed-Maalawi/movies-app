@@ -34,12 +34,13 @@
                                 </div>
                             @else
                                 @break
+                            @endif
                         @endforeach
                     </div>
                 </div>
                 @if (count($movie['videos']['results']) > 0)
                     <div class="mt-12">
-                        <a href="{{ 'https://youtube.com/watch?v='.$movie['videos']['results'][0]['key'] }}" class="flex items-center bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4 hover:bg-orange-300 transition ease-in-out duration-150 capitalize inline-flex">
+                        <a target="_blank" href="{{ 'https://youtube.com/watch?v='.$movie['videos']['results'][0]['key'] }}" class="flex items-center bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4 hover:bg-orange-300 transition ease-in-out duration-150 capitalize inline-flex">
                             <svg class="mr-1 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.11-.9-2-2-2zm0 14H3V5h18v12zm-5-6l-7 4V7z"/></svg>
                             play trailer</a>
                     </div>
@@ -55,8 +56,8 @@
                 @foreach ($movie['credits']['cast'] as $actor)
                     @if ($loop->index < 5)
                         <div class="mt-8">
-                            <a href="#">
-                                <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ (isset($actor['profile_path']))? 'https://image.tmdb.org/t/p/w500'.$actor['profile_path'] : asset('img/unknown.jpg') }}" alt="cast-member">
+                            <a href="{{ route('actors.show', $actor['id']) }}">
+                                <img class="hover:opacity-75 transition ease-in-out duration-150 rounded" src="{{ (isset($actor['profile_path']))? 'https://image.tmdb.org/t/p/w500'.$actor['profile_path'] : 'https://ui-avatars.com/api/?size=235$name='.$actor['name'] }}" alt="cast-member">
                             </a>
                             <div class="mt-2 ">
                                 <a class="mt-2 hover:text-gray-300 text-lg capitalize" href="">{{ $actor['name'] }}</a>

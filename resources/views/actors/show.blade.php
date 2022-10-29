@@ -46,13 +46,13 @@
 
                 <h4 class="font-semibold capitalize mt-8 text-xl">known for</h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-                    @foreach($movies as $movie)
-                        @if($loop->index < 5)
+                    @foreach($knowForMovies as $movie)
+                        {{-- @if($loop->index < 5) --}}
                             <a class="mt-8" href="{{ route('movies.show', $movie['id']) }}">
                                 <img class="hover:opacity-75 rounded transition ease-in-out duration-150" src="{{ $movie['poster_path'] }}" alt="cover">
                                 <h4 class="mt-2 hover:text-gray-300 text-sm capitalize">{{ $movie['title'] }}</h4>
                             </a>
-                        @endif
+                        {{-- @endif --}}
                     @endforeach
                 </div>
             </div>
@@ -63,8 +63,8 @@
         <div class="container mx-auto px-12 py-16">
             <h2 class="text-xl font-semibold capitalize">credits</h2>
             <ul class="list-disc leading-loose mt-8 pl-5">
-                @foreach($actor['credits']['cast'] as $movie)
-                    <li>{{ $movie['release_date'] }} &middot; <strong>{{ $movie['original_title'] }}</strong> as {{ $movie['character'] }}</li>
+                @foreach($knowForCredits as $movie)
+                    <li>{{ $movie['release_date'] }} &middot; <a class="hover:underline" href="{{ route('movies.show', $movie['id']) }}" rel="noopener noreferrer"><strong>{{ $movie['original_title'] }}</strong></a> as {{ $movie['character'] }}</li>
                 @endforeach
             </ul>
         </div>

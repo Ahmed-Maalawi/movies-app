@@ -63,11 +63,11 @@ class ActorViewModel extends ViewModel
     }
 
 
-    public function knowForTitle()
+    public function knowForMovies()
     {
-       $castTitles = collect($this->credits)->get('cast');
+        $castMovies = collect($this->credits)->get('cast');
 
-        return collect($castTitles)->sortByDesc('popularity')->take(5)
+        return collect($castMovies)->sortByDesc('popularity')->take(5)
             ->map(function ($movie) {
                 return collect($movie)->merge([
                 'poster_path' => $movie['poster_path']
@@ -76,9 +76,30 @@ class ActorViewModel extends ViewModel
                 'title' => isset($movie['title'])
                     ? $movie['title']
                     : 'untitled',
-                'poster_path' => 'https://image.tmdb.org/t/p/w500' . $movie['poster_path'],
-                'release_date' => \Carbon\Carbon::parse($movie['release_date'])->format('Y')
+                // 'poster_path' => 'https://image.tmdb.org/t/p/w500' . $movie['poster_path'],
+                // 'release_date' =>
                 ]);
             });
+    }
+
+    public function knowForCredits()
+    {
+        $castMovies = collect($this->credits)->get('cast');
+
+        return collect($castMovies)->map(function ($movie) {
+            return collect($movie)->merge([
+                'release_date' => $movie['release_date']
+                    ? \Carbon\Carbon::parse($movie['release_date'])->format('Y')
+                    : 'unknow',
+                'original_title' => $movie['original_title']
+                    ? $movie['original_title']
+                    : 'title unknown',
+                'character' => $movie['character']
+                    ? $movie['character']
+                    : 'actor name unknown'
+            ])->only([
+                'release_date', 'id', 'original_title', 'character'
+            ]);
+        });
     }
 }

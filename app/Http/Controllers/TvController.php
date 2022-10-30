@@ -70,7 +70,7 @@ class TvController extends Controller
     public function show($id)
     {
         $tvShow_info = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/tv/'.$id.'?append_to_response=videos,images')
+        ->get('https://api.themoviedb.org/3/tv/'.$id. '?append_to_response=videos,images,credits')
         ->json();
 
         $viewModel = new TvShowViewModel($tvShow_info);
